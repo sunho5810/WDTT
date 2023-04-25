@@ -1,5 +1,6 @@
 let initState = {
-    membersList: {}
+    membersList: {},
+    loading: false
 }
 
 const membersReducer = (state = initState, action) => {
