@@ -1,5 +1,5 @@
 let initState = {
-    authenticate: false
+    authenticate: true
 }
 
 function authenticateReducer(state = initState, action){
