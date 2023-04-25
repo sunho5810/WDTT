@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+    url(/src/fonts/NotoSansKR-Regular-Hestia.eot),
+    url(/src/fonts/NotoSansKR-Regular-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(/src/fonts/NotoSansKR-Regular-Hestia.woff) format('woff'),
+    url(/src/fonts/NotoSansKR-Regular-Hestia.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: medium;
+    font-weight: 500;
+    src: local('Noto Sans Medium'), local('NotoSans-medium'),
+    url(/src/fonts/NotoSansKR-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: bold;
+    font-weight: 700;
+    src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+    url(/src/fonts/NotoSansKR-Bold-Hestia.eot),
+    url(/src/fonts/NotoSansKR-Bold-Hestia.eot?#iefix) format('embedded-opentype'),
+    url(/src/fonts/NotoSansKR-Bold-Hestia.woff) format('woff'),
+    url(/src/fonts/NotoSansKR-Bold-Hestia.otf) format('opentype');
+}
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{
+    margin:0;padding:0;border:0;outline:0;vertical-align:baseline;background:transparent;line-height:100%;
+    font-family:'Noto Sans Korean',sans-serif; 
+	color:#333;
+}
+html,body{font-size:16px;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,small{display:block;}
+input,textarea,select,button,table{font-size:0.875rem; line-height:1;}
+blockquote,q{quotes:none;}
+mark{background-color:#ff9;color:#333;font-style:italic;font-weight:bold;}
+del{text-decoration: line-through;}
+blockquote:before,blockquote:after,q:before,q:after {content:'';content:none;}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+img,fieldset{border:0;vertical-align:middle;} 
+ul,ol{list-style:none;}
+em,address{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed;}
+a{text-decoration:none;color:#333;vertical-align:middle;} 
+a:hover,a:active,a:focus{text-decoration:none;}
+.blind{overflow:hidden;position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;margin:-1px;border:0;padding:0;}
+caption.blind{position:static;}
+
+@media screen and (max-width:1200px){
+    html,body{
+        font-size:14px;
+    }
+}
+
+@media screen and (max-width:768px){
+    html, body{
+        font-size:12px;
+    }
+}

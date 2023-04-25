@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
-}
+body{width: 100%; overflow-x: hidden;}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.wrap{padding: 50px 0;}
+.inner{width: calc(100% - 120px); height: 100%; margin: 0 auto;}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* S : 헤더 */
+.header{position: relative; width: 100%; height: 80px; background: #0F1314; border-bottom: 1px solid #eee; box-sizing: border-box;}
+.inner--header{display: flex; justify-content: space-between; align-items: center; width: calc(100% - 40px);}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.logo{display: block; width: 60px; height: 60px; background: url(/src/img/common/wdttLogo.png) center/contain no-repeat;}
 
-.App-link {
-  color: #61dafb;
-}
+.headerBtns{display: flex; align-items: center; gap: 20px;}
+.loginBtn{color: #fff; font-size: 1.125rem; cursor: pointer;}
+.loginBtn:hover{color: #fff;}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.menuBtn{display: flex; position: relative; flex-direction: column; gap: 4px; width: 24px; height: 14px; cursor: pointer;}
+.menuBtn span{width: 100%; height: 2px; background-color: #fff; transition: .2s;}
+.menuBtn.open span{position: relative; width: calc(100% + 1px);}
+.menuBtn.open span:nth-child(1){transform: rotateZ(45deg) translate(4.5px, 4.5px);}
+.menuBtn.open span:nth-child(2){opacity: 0;}
+.menuBtn.open span:nth-child(3){transform: rotateZ(-45deg) translate(4.5px, -4.5px);}
+
+.navWrap{position: absolute; top: calc(100%); left: 100%; z-index: 9999; width: 100%; height: calc(100vh - 80px); background: #0F1314; transition: left .2s; border-top: 1px solid #fff;}
+.navWrap.open{left: 0; transition-duration: .4s;}
+.menuList{padding: 0;}
+.menuList__li__link{display: flex; align-items: flex-start; width: 100%; min-height: 44px; padding: 12px 20px; box-sizing: border-box; font-size: 16px; text-align: left; color: #fff; border-bottom: 1px solid #eee;}
+.menuList__li__link:hover{color: #fff;}
+/* E : 헤더 */
+
+
+/* S : 로그인 */
+.loginForm{width: 60%; margin: 0 auto;}
+.loginDesc{margin: 20px 0; color: red;}
+/* E : 로그인 */
+
+.tbl{width: 100%; border: 1px solid #000; box-sizing: border-box;}
+.tbl th{padding: 10px 0; font-weight: bold; background-color: #eee; border-right: 1px solid #000; text-align: center;}
+.tbl th:last-child{border-right: none;}
+.tbl tr{border-bottom: 1px solid #000;}
+.tbl td{padding: 10px 10px; border-right: 1px solid #000; text-align: center; box-sizing: border-box;}
+.tbl td input, .tbl td select{width: 100%; padding: 0 10px; text-align: center; border: 1px solid #000; border-radius: 5px; box-sizing: border-box;}
+.tbl td:last-child{border-right: none;}

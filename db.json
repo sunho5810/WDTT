@@ -1,0 +1,31 @@
+{
+  "members" : [
+    {
+      "id": 1,
+      "backNum": 25,
+      "name": "주선호",
+      "tier": 1,
+      "games": 2,
+      "goals": 5,
+      "assists": 5
+    },
+    {
+      "id": 2,
+      "backNum": 7,
+      "name": "우병길",
+      "tier": 2,
+      "games": 3,
+      "goals": 6,
+      "assists": 7
+    },
+    {
+      "id": 3,
+      "backNum": 13,
+      "name": "박종훈",
+      "tier": 3,
+      "games": 4,
+      "goals": 2,
+      "assists": 8
+    }
+  ]
+}
