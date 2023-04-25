@@ -7,9 +7,10 @@ import { Button } from 'react-bootstrap';
 
 const Members = () => {
 
-    const {membersList, loading, updateList} = useSelector((state) => state.members);
+    const {membersList, loading} = useSelector((state) => state.members);
 
     const [tempList, setTempList] = useState([]);
+
 
     const dispatch = useDispatch();
     
@@ -26,7 +27,8 @@ const Members = () => {
 
     const clickUpdateMembersData = () => {
         dispatch(membersAction.updateMembersData(tempList));
-        console.log("update -> updateList?", updateList);
+        dispatch(membersAction.getMembersData());
+        // console.log("update -> updateList?", updateList);
     }
 
     if(loading){
@@ -69,7 +71,7 @@ const Members = () => {
                         }
                     </tbody>
                 </table>
-                <Button variant='dark' onClick={() => clickUpdateMembersData()}>수정</Button>
+                <Button variant='dark' onClick={() => {clickUpdateMembersData()}}>수정</Button>
             </div>
         )
     }

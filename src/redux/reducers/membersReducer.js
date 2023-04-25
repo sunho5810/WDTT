@@ -26,10 +26,23 @@ const membersReducer = (state = initState, action) => {
                 ...state,
                 loading: true
             }
-        case "UPDATE_MEMBERS_DATA":
+        case "POST_MEMBERS_DATA_REQUEST":
             return{
                 ...state,
-                updateList: payload.data
+                loading: true
+            }
+
+        case "POST_MEMBERS_DATA_SUCCESS":
+            return{
+                ...state,
+                membersList: payload.data,
+                loading: false
+            }
+
+        case "POST_MEMBERS_DATA_FAILED":
+            return{
+                ...state,
+                loading: true
             }
         default:
             return{...state}

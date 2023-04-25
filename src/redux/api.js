@@ -25,4 +25,16 @@ axios.interceptors.response.use(function (response) {
     return Promise.reject(error);
   });
 
+  // axios.post("url", {
+  //   username: "",
+  //   password: ""
+  // })
+  // .then(function (response) {
+  //     // response  
+  // }).catch(function (error) {
+  //     // 오류발생시 실행
+  // }).then(function() {
+  //     // 항상 실행
+  // });
+
   export default api;

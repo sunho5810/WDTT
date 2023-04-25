@@ -17,26 +17,22 @@ const MemberCard = ({item, setTempList, tempList, itemIdx}) => {
     assists: item.assists
   });
 
-  const [dataName, setDataName] = useState("");
   const [dataIndex, setDataIndex] = useState(null);
 
-  const dispatch = useDispatch();
-
   useEffect(() => {
-    console.log("---------------------")
-    console.log("updateData?", updateData);
+    // console.log("---------------------")
+    // console.log("updateData?", updateData);
 
     tempList[dataIndex] = updateData;
     setTempList(tempList);
 
-    console.log("useEffect - tempList?", tempList);
+    // console.log("useEffect - tempList?", tempList);
     // console.log("useEffect - membersList?", membersList);
 
   }, [updateData])
 
   const changeValue = (e, dataName, idx) => {
     setUpdateDate({...updateData, [dataName]: parseFloat(e.target.value)});
-    setDataName(dataName);
     setDataIndex(idx);
   }
 
