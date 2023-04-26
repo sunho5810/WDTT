@@ -40,6 +40,7 @@ const MemberCard = ({item, setTempList, tempList, itemIdx}) => {
   if(auth){
     return (
       <tr>
+          {/* <td><input type='checkbox'/></td> */}
           <td>{itemIdx + 1}</td>
           <td><input className='input' type='text' defaultValue={item.backNum} onChange={(e) => changeValue(e, "backNum", itemIdx)}/></td>
           <td><input className='input' type='text' defaultValue={item.name} onChange={(e) => changeValue(e, "name", itemIdx)}/></td>
@@ -60,6 +61,7 @@ const MemberCard = ({item, setTempList, tempList, itemIdx}) => {
   } else {
     return (
       <tr>
+          {/* <td><input type='checkbox'/></td> */}
           <td>{itemIdx + 1}</td>
           <td>{item.backNum}</td>
           <td>{item.name}</td>

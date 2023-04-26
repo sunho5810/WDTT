@@ -54,6 +54,13 @@ const Members = () => {
         dispatch(membersAction.getMembersData());
     }
 
+    const sortData = (dataName) => {
+        const sortedData = [...tempList].sort((a, b) => dataName == "name" ? a[dataName].localeCompare(b[dataName]) : a[dataName] - b[dataName]);
+        console.log(sortedData);
+        // sortData(sortedData);
+        setTempList(sortedData);
+    }
+
     if(loading){
         return (
             <ClipLoader
@@ -67,6 +74,7 @@ const Members = () => {
             <div className='inner'>
                 <table className='tbl'>
                     <colgroup>
+                        {/* <col width="3%"/> */}
                         <col width="10%"/>
                         <col width="10%"/>
                         <col width="15%"/>
@@ -77,18 +85,19 @@ const Members = () => {
                     </colgroup>
                     <thead>
                         <tr>
+                            {/* <th></th> */}
                             <th>No.</th>
-                            <th>등번호</th>
-                            <th>이름</th>
-                            <th>티어</th>
-                            <th>게임 수</th>
-                            <th>골</th>
-                            <th>어시스트</th>
+                            <th onClick={() => sortData("backNum")}>등번호</th>
+                            <th onClick={() => sortData("name")}>이름</th>
+                            <th onClick={() => sortData("tier")}>티어</th>
+                            <th onClick={() => sortData("games")}>게임 수</th>
+                            <th onClick={() => sortData("goals")}>골</th>
+                            <th onClick={() => sortData("assists")}>어시스트</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            membersList?.map((item, index) => (
+                            tempList?.map((item, index) => (
                                 <MemberCard key={item.id} itemIdx={index} item={item} tempList={tempList} setTempList={setTempList}/>
                             ))
                         }
