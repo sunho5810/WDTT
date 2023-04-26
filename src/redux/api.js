@@ -1,7 +1,9 @@
 import axios from "axios";
 
+
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://my-json-server.typicode.com/sunho5810/WDTT',
   headers: {'X-Custom-Header': 'foobar'}
 });
 
