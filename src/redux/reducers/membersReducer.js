@@ -2,7 +2,7 @@ let initState = {
     membersList: {},
     // updateList: {},
     // addList: {},
-    loading: false
+    loading: true
 }
 
 const membersReducer = (state = initState, action) => {
