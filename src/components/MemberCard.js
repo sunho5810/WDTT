@@ -34,6 +34,7 @@ const MemberCard = ({item, setTempList, tempList, itemIdx}) => {
   const changeValue = (e, dataName, idx) => {
     setUpdateDate({...updateData, [dataName]: dataName == "name" ? e.target.value : parseFloat(e.target.value)});
     setDataIndex(idx);
+    console.log("value?", e.target.value);
   }
 
   if(auth){

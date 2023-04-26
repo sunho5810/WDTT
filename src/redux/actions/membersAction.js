@@ -7,7 +7,7 @@ function getMembersData(){
             
             const membersData = await api.get(`/members`);
             
-            console.log("membersData?", membersData);
+            // console.log("membersData?", membersData);
             
             dispatch({type: "GET_MEMBERS_DATA_SUCCESS", payload: {membersData: membersData.data}});
         } catch (error) {
@@ -43,11 +43,11 @@ function addMembersData(idx, data){
         try{
             // dispatch({type: "MEMBERS_DATA_REQUEST"});
 
-            console.log("addMembersData -> data?", data);
+            // console.log("addMembersData -> data?", data);
 
             const add_data = await api.post(`/members`, data);
 
-            console.log("add_data?", add_data);
+            // console.log("add_data?", add_data);
 
             // dispatch({type: "ADD_MEMBERS_DATA_SUCCESS", payload: {data: add_data}});
 

@@ -4,7 +4,7 @@
       "id": 120,
       "backNum": 25,
       "name": "주선호",
-      "tier": 0,
+      "tier": 1,
       "games": 2,
       "goals": 0,
       "assists": 0
@@ -40,7 +40,7 @@
       "id": 6498,
       "backNum": 23,
       "name": "김민철",
-      "tier": 0,
+      "tier": 1,
       "games": 2,
       "goals": 2,
       "assists": 4
@@ -67,7 +67,7 @@
       "id": 2621,
       "backNum": 14,
       "name": "박기수",
-      "tier": 0,
+      "tier": 1,
       "games": 0,
       "goals": 0,
       "assists": 0
@@ -166,7 +166,7 @@
       "id": 3238,
       "backNum": 21,
       "name": "장치윤",
-      "tier": 0,
+      "tier": 1,
       "games": 0,
       "goals": 0,
       "assists": 0

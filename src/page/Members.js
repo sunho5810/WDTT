@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 const Members = () => {
 
     const {membersList, loading} = useSelector((state) => state.members);
-    const auth = useSelector((state) => state.auth);
+    const auth = useSelector((state) => state.auth.authenticate);
 
     const [tempList, setTempList] = useState([]);
 
@@ -35,7 +35,7 @@ const Members = () => {
 
     const clickAddMembersData = () => {
         const randomNum = Math.floor(Math.random() * ((9999 - 1000) + 1));
-        console.log("randomNum?", randomNum);
+        // console.log("randomNum?", randomNum);
 
         const emptyObject = {
             id: randomNum,
@@ -48,7 +48,7 @@ const Members = () => {
         }
         tempList[tempList.length] = emptyObject;
         setTempList(tempList);
-        console.log("??", tempList);
+        // console.log("??", tempList);
 
         dispatch(membersAction.addMembersData(randomNum, emptyObject));
         dispatch(membersAction.getMembersData());
@@ -94,10 +94,15 @@ const Members = () => {
                         }
                     </tbody>
                 </table>
-                {/* <div>
-                    <Button variant='dark' onClick={() => {clickUpdateMembersData()}}>수정</Button>
-                    <Button variant='success' onClick={() => {clickAddMembersData()}}>추가</Button>
-                </div> */}
+                {
+                    auth === true ? (
+                        <div>
+                            <Button variant='dark' onClick={() => {clickUpdateMembersData()}}>수정</Button>
+                            <Button variant='success' onClick={() => {clickAddMembersData()}}>추가</Button>
+                        </div>
+                    ) : ("")
+                }
+                
             </div>
         )
     }
