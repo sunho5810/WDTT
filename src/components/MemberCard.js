@@ -32,16 +32,16 @@ const MemberCard = ({item, setTempList, tempList, itemIdx}) => {
   }, [updateData])
 
   const changeValue = (e, dataName, idx) => {
-    setUpdateDate({...updateData, [dataName]: parseFloat(e.target.value)});
+    setUpdateDate({...updateData, [dataName]: dataName == "name" ? e.target.value : parseFloat(e.target.value)});
     setDataIndex(idx);
   }
 
   if(auth){
     return (
       <tr>
-          <td>{updateData.id}</td>
-          <td>{updateData.backNum}</td>
-          <td>{updateData.name}</td>
+          <td>{itemIdx + 1}</td>
+          <td><input className='input' type='text' defaultValue={item.backNum} onChange={(e) => changeValue(e, "backNum", itemIdx)}/></td>
+          <td><input className='input' type='text' defaultValue={item.name} onChange={(e) => changeValue(e, "name", itemIdx)}/></td>
           <td>
             <select onChange={(e) => changeValue(e, "tier", itemIdx)} defaultValue={item.tier}>
               <option value={1}>1</option>
@@ -56,31 +56,10 @@ const MemberCard = ({item, setTempList, tempList, itemIdx}) => {
           <td><input className='input' type='text' defaultValue={item.assists} onChange={(e) => changeValue(e, "assists", itemIdx)}/></td>
       </tr>
     )
-
-    // return (
-    //   <tr>
-    //       <td>{updateData.id}</td>
-    //       <td>{updateData.backNum}</td>
-    //       <td>{updateData.name}</td>
-    //       <td>
-    //         <select onChange={(e) => setUpdateDate({...updateData, tier: e.target.value})}>
-    //           <option defaultValue={item.tier}>{updateData.tier}</option>
-    //           <option value={1}>1</option>
-    //           <option value={1.5}>1.5</option>
-    //           <option value={2}>2</option>
-    //           <option value={2.5}>2.5</option>
-    //           <option value={3}>3</option>
-    //         </select>
-    //       </td>
-    //       <td><input className='input' type='text' defaultValue={item.games} onChange={(e) => setUpdateDate({...updateData, games: e.target.value})}/></td>
-    //       <td><input className='input' type='text' defaultValue={item.goals} onChange={(e) => setUpdateDate({...updateData, goals: e.target.value})}/></td>
-    //       <td><input className='input' type='text' defaultValue={item.assists} onChange={(e) => setUpdateDate({...updateData, assists: e.target.value})}/></td>
-    //   </tr>
-    // )
   } else {
     return (
       <tr>
-          <td>{item.id}</td>
+          <td>{itemIdx + 1}</td>
           <td>{item.backNum}</td>
           <td>{item.name}</td>
           <td>{item.tier}</td>

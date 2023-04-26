@@ -1,6 +1,7 @@
 let initState = {
     membersList: {},
-    updateList: {},
+    // updateList: {},
+    // addList: {},
     loading: true
 }
 
@@ -8,7 +9,13 @@ const membersReducer = (state = initState, action) => {
     let {type, payload} = action;
 
     switch (type) {
-        case "GET_MEMBERS_DATA_REQUEST":
+        case "MEMBERS_DATA_REQUEST":
+            return{
+                ...state,
+                loading: true
+            }
+
+        case "MEMBERS_DATA_FAILED":
             return{
                 ...state,
                 loading: true
@@ -21,29 +28,19 @@ const membersReducer = (state = initState, action) => {
                 loading: false
             }
 
-        case "GET_MEMBERS_DATA_FAILED":
-            return{
-                ...state,
-                loading: true
-            }
-        case "POST_MEMBERS_DATA_REQUEST":
-            return{
-                ...state,
-                loading: true
-            }
+        // case "UPDATE_MEMBERS_DATA_SUCCESS":
+        //     return{
+        //         ...state,
+        //         updateList: payload.data,
+        //         loading: false
+        //     }
 
-        case "POST_MEMBERS_DATA_SUCCESS":
-            return{
-                ...state,
-                membersList: payload.data,
-                loading: false
-            }
-
-        case "POST_MEMBERS_DATA_FAILED":
-            return{
-                ...state,
-                loading: true
-            }
+        // case "ADD_MEMBERS_DATA_SUCCESS":
+        //     return{
+        //         ...state,
+        //         addList: payload.data,
+        //         loading: false
+        //     }
         default:
             return{...state}
     }

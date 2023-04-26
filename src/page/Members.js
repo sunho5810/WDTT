@@ -8,9 +8,9 @@ import { Button } from 'react-bootstrap';
 const Members = () => {
 
     const {membersList, loading} = useSelector((state) => state.members);
+    const auth = useSelector((state) => state.auth);
 
     const [tempList, setTempList] = useState([]);
-
 
     const dispatch = useDispatch();
     
@@ -25,10 +25,33 @@ const Members = () => {
         }
     }, [loading])
 
+    useEffect(() => {        
+        console.log("auth?", auth)
+    }, [auth])
+
     const clickUpdateMembersData = () => {
         dispatch(membersAction.updateMembersData(tempList));
+    }
+
+    const clickAddMembersData = () => {
+        const randomNum = Math.floor(Math.random() * ((9999 - 1000) + 1));
+        console.log("randomNum?", randomNum);
+
+        const emptyObject = {
+            id: randomNum,
+            backNum: 0,
+            name: "",
+            tier: 0,
+            games: 0,
+            goals: 0,
+            assists: 0
+        }
+        tempList[tempList.length] = emptyObject;
+        setTempList(tempList);
+        console.log("??", tempList);
+
+        dispatch(membersAction.addMembersData(randomNum, emptyObject));
         dispatch(membersAction.getMembersData());
-        // console.log("update -> updateList?", updateList);
     }
 
     if(loading){
@@ -44,17 +67,17 @@ const Members = () => {
             <div className='inner'>
                 <table className='tbl'>
                     <colgroup>
-                        <col width="5%"/>
-                        <col width="5%"/>
-                        <col width="25%"/>
-                        <col width="20%"/>
+                        <col width="10%"/>
+                        <col width="10%"/>
+                        <col width="15%"/>
+                        <col width="15%"/>
                         <col width="10%"/>
                         <col width="10%"/>
                         <col width="10%"/>
                     </colgroup>
                     <thead>
                         <tr>
-                            <th>번호</th>
+                            <th>No.</th>
                             <th>등번호</th>
                             <th>이름</th>
                             <th>티어</th>
@@ -71,7 +94,10 @@ const Members = () => {
                         }
                     </tbody>
                 </table>
-                <Button variant='dark' onClick={() => {clickUpdateMembersData()}}>수정</Button>
+                <div>
+                    <Button variant='dark' onClick={() => {clickUpdateMembersData()}}>수정</Button>
+                    <Button variant='success' onClick={() => {clickAddMembersData()}}>추가</Button>
+                </div>
             </div>
         )
     }
