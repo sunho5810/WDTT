@@ -94,10 +94,10 @@ const Members = () => {
                         }
                     </tbody>
                 </table>
-                <div>
+                {/* <div>
                     <Button variant='dark' onClick={() => {clickUpdateMembersData()}}>수정</Button>
                     <Button variant='success' onClick={() => {clickAddMembersData()}}>추가</Button>
-                </div>
+                </div> */}
             </div>
         )
     }
