@@ -5,7 +5,7 @@ function getMembersData(){
         try{
             dispatch({type: "MEMBERS_DATA_REQUEST"});
             
-            const membersData = await api.get(`/membersList`);
+            const membersData = await api.get(`/memberInfo`);
             
             console.log("membersData?", membersData);
             
@@ -24,7 +24,7 @@ function updateMembersData(dataList){
 
             const update_data = []
             for(var i = 0; i < dataList.length; i++){
-                update_data[i] = await api.put(`/membersList/${dataList[i].id}`, dataList[i]);
+                update_data[i] = await api.put(`/memberInfo/${dataList[i].id}`, dataList[i]);
             }
 
             // console.log("post->data??", data);
@@ -45,7 +45,7 @@ function addMembersData(idx, data){
 
             console.log("addMembersData -> data?", data);
 
-            const add_data = await api.post(`/membersList`, data);
+            const add_data = await api.post(`/memberInfo`, data);
 
             console.log("add_data?", add_data);
 
