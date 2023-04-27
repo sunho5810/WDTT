@@ -4,6 +4,7 @@ body{width: 100%; overflow-x: hidden;}
 .inner{width: calc(100% - 120px); height: 100%; margin: 0 auto;}
 
 /* S : 헤더 */
+
 .header{position: relative; width: 100%; height: 80px; background: #0F1314; border-bottom: 1px solid #eee; box-sizing: border-box;}
 .inner--header{display: flex; justify-content: space-between; align-items: center; width: calc(100% - 40px);}
 
@@ -25,12 +26,15 @@ body{width: 100%; overflow-x: hidden;}
 .menuList{padding: 0;}
 .menuList__li__link{display: flex; align-items: flex-start; width: 100%; min-height: 44px; padding: 12px 20px; box-sizing: border-box; font-size: 16px; text-align: left; color: #fff; border-bottom: 1px solid #eee;}
 .menuList__li__link:hover{color: #fff;}
+
 /* E : 헤더 */
 
 
 /* S : 로그인 */
+
 .loginForm{width: 60%; margin: 0 auto;}
 .loginDesc{margin: 20px 0; color: red;}
+
 /* E : 로그인 */
 
 .tbl{width: 100%; border: 1px solid #000; box-sizing: border-box;}
@@ -40,6 +44,23 @@ body{width: 100%; overflow-x: hidden;}
 .tbl td{padding: 10px 10px; border-right: 1px solid #000; text-align: center; box-sizing: border-box;}
 .tbl td input, .tbl td select{width: 100%; padding: 0 10px; text-align: center; border: 1px solid #000; border-radius: 5px; box-sizing: border-box;}
 .tbl td:last-child{border-right: none;}
+
+/* S : Entry */
+
+.entryWrap{display: flex; flex-wrap: wrap; width: 100%;}
+.entryMaker{overflow: hidden; width: 50%; border-radius: 10px; border: 1px solid #0F1314;}
+.entryMaker__teamName{width: 100%; padding: 10px 20px; background: #0F1314;}
+.entryMaker__cont{padding: 20px;}
+.entryMaker__playersList{display: flex; flex-wrap: wrap; gap: 10px; padding: 20px; border: 1px solid #0F1314; border-radius: 10px;}
+.entryMaker__members{margin-top: 20px; padding: 20px; border: 1px solid #0F1314; border-radius: 10px;}
+.entryMaker__membersList{overflow-y: auto; display: flex; gap: 10px; flex-wrap: wrap;  max-height: 150px}
+.playerBadge{display: inline-block; padding: 5px 15px 7px; background: #0F1314; border-radius: 15px; color: #fff; cursor: pointer;}
+/* .entryMaker__membersList .playerBadge.selected{opacity: .5;} */
+/* .entryMaker__playersList .playerBadge.selected{opacity: 1;} */
+.entryMaker__btns{display: flex; justify-content: center; align-items: center; gap: 20px; margin-top: 20px;}
+.entryMaker__btns button{width: 30%;}
+
+/* E : Entry */
 
 @media screen and (max-width: 768px) {
     .wrap{padding: 30px 0;}

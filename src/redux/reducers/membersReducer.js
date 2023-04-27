@@ -1,7 +1,5 @@
 let initState = {
     membersList: {},
-    // updateList: {},
-    // addList: {},
     loading: true
 }
 

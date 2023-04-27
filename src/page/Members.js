@@ -21,7 +21,8 @@ const Members = () => {
     useEffect(() => {        
         if(loading == false){
             const copyArr = [...membersList];
-            setTempList(copyArr);
+            const sortedName = [...copyArr].sort((a, b) => a.name.localeCompare(b.name));
+            setTempList(sortedName);
         }
     }, [loading])
 
@@ -56,8 +57,6 @@ const Members = () => {
 
     const sortData = (dataName) => {
         const sortedData = [...tempList].sort((a, b) => dataName == "name" ? a[dataName].localeCompare(b[dataName]) : a[dataName] - b[dataName]);
-        console.log(sortedData);
-        // sortData(sortedData);
         setTempList(sortedData);
     }
 

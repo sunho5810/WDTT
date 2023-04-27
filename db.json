@@ -243,5 +243,17 @@
       "goals": 0,
       "assists": 0
     }
+  ],
+  "teams": [
+    {
+      "id": 46416,
+      "name": "",
+      "playerList": []
+    },
+    {
+      "id": 610488,
+      "name": "",
+      "playerList": []
+    }
   ]
 }
