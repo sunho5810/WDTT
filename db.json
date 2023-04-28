@@ -244,16 +244,287 @@
       "assists": 0
     }
   ],
-  "teams": [
+  "entryList": [
     {
-      "id": 46416,
-      "name": "",
-      "playerList": []
+      "id": 6498,
+      "index": 0,
+      "visible": false,
+      "backNum": 23,
+      "name": "김민철",
+      "tier": 1
     },
     {
-      "id": 610488,
-      "name": "",
-      "playerList": []
+      "id": 2621,
+      "index": 1,
+      "visible": false,
+      "backNum": 14,
+      "name": "박기수",
+      "tier": 1
+    },
+    {
+      "id": 3238,
+      "index": 2,
+      "visible": false,
+      "backNum": 21,
+      "name": "장치윤",
+      "tier": 1
+    },
+    {
+      "id": 120,
+      "index": 3,
+      "visible": false,
+      "backNum": 25,
+      "name": "주선호",
+      "tier": 1
+    },
+    {
+      "id": 5204,
+      "index": 4,
+      "visible": true,
+      "backNum": 12,
+      "name": "김재경",
+      "tier": 1.5
+    },
+    {
+      "id": 6453,
+      "index": 5,
+      "visible": true,
+      "backNum": 3,
+      "name": "박진한",
+      "tier": 1.5
+    },
+    {
+      "id": 5043,
+      "index": 6,
+      "visible": false,
+      "backNum": 18,
+      "name": "임하람",
+      "tier": 1.5
+    },
+    {
+      "id": 1182,
+      "index": 7,
+      "visible": true,
+      "backNum": 8,
+      "name": "주재우",
+      "tier": 1.5
+    },
+    {
+      "id": 8695,
+      "index": 8,
+      "visible": false,
+      "backNum": 9,
+      "name": "김도형",
+      "tier": 2
+    },
+    {
+      "id": 2500,
+      "index": 9,
+      "visible": true,
+      "backNum": 25,
+      "name": "박종훈",
+      "tier": 2
+    },
+    {
+      "id": 3071,
+      "index": 10,
+      "visible": true,
+      "backNum": 11,
+      "name": "이서범",
+      "tier": 2
+    },
+    {
+      "id": 4034,
+      "index": 11,
+      "visible": true,
+      "backNum": 77,
+      "name": "정재봉",
+      "tier": 2
+    },
+    {
+      "id": 4544,
+      "index": 12,
+      "visible": false,
+      "backNum": 6,
+      "name": "조성원",
+      "tier": 2
+    },
+    {
+      "id": 1945,
+      "index": 13,
+      "visible": true,
+      "backNum": 0,
+      "name": "김주성",
+      "tier": 2.5
+    },
+    {
+      "id": 156,
+      "index": 14,
+      "visible": true,
+      "backNum": 17,
+      "name": "서준식",
+      "tier": 2.5
+    },
+    {
+      "id": 4279,
+      "index": 15,
+      "visible": true,
+      "backNum": 99,
+      "name": "우병걸",
+      "tier": 2.5
+    },
+    {
+      "id": 964,
+      "index": 16,
+      "visible": true,
+      "backNum": 7,
+      "name": "우병길",
+      "tier": 2.5
+    },
+    {
+      "id": 7380,
+      "index": 17,
+      "visible": true,
+      "backNum": 19,
+      "name": "이영재",
+      "tier": 2.5
+    },
+    {
+      "id": 3655,
+      "index": 18,
+      "visible": true,
+      "backNum": 74,
+      "name": "이종원",
+      "tier": 2.5
+    },
+    {
+      "id": 4348,
+      "index": 19,
+      "visible": true,
+      "backNum": 1,
+      "name": "정민호",
+      "tier": 2.5
+    },
+    {
+      "id": 4790,
+      "index": 20,
+      "visible": true,
+      "backNum": 33,
+      "name": "정지호",
+      "tier": 2.5
+    },
+    {
+      "id": 3201,
+      "index": 21,
+      "visible": true,
+      "backNum": 22,
+      "name": "조철환",
+      "tier": 2.5
+    },
+    {
+      "id": 7415,
+      "index": 22,
+      "visible": true,
+      "backNum": 16,
+      "name": "서보형",
+      "tier": 3
+    },
+    {
+      "id": 3167,
+      "index": 23,
+      "visible": true,
+      "backNum": 10,
+      "name": "오지환",
+      "tier": 3
+    },
+    {
+      "id": 6032,
+      "index": 24,
+      "visible": true,
+      "backNum": 5,
+      "name": "우병조",
+      "tier": 3
+    },
+    {
+      "id": 8267,
+      "index": 25,
+      "visible": true,
+      "backNum": 4,
+      "name": "정회돈",
+      "tier": 3
+    },
+    {
+      "id": 2449,
+      "index": 26,
+      "visible": true,
+      "backNum": 69,
+      "name": "최영",
+      "tier": 3
+    }
+  ],
+  "teams": [
+    {
+      "id": 162258,
+      "teamName": "악마팀",
+      "personnel": 3,
+      "playerList": [
+        {
+          "id": 4544,
+          "index": 12,
+          "backNum": 6,
+          "name": "조성원",
+          "tier": 2
+        },
+        {
+          "id": 8695,
+          "index": 8,
+          "backNum": 9,
+          "name": "김도형",
+          "tier": 2
+        },
+        {
+          "id": 5043,
+          "index": 6,
+          "backNum": 18,
+          "name": "임하람",
+          "tier": 1.5
+        }
+      ]
+    },
+    {
+      "id": 826845,
+      "teamName": "천사팀",
+      "personnel": 4,
+      "playerList": [
+        {
+          "id": 6498,
+          "index": 0,
+          "backNum": 23,
+          "name": "김민철",
+          "tier": 1
+        },
+        {
+          "id": 2621,
+          "index": 1,
+          "backNum": 14,
+          "name": "박기수",
+          "tier": 1
+        },
+        {
+          "id": 3238,
+          "index": 2,
+          "backNum": 21,
+          "name": "장치윤",
+          "tier": 1
+        },
+        {
+          "id": 120,
+          "index": 3,
+          "backNum": 25,
+          "name": "주선호",
+          "tier": 1
+        }
+      ]
     }
   ]
 }

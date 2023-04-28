@@ -6,7 +6,6 @@ import { ClipLoader } from 'react-spinners';
 import { Button } from 'react-bootstrap';
 import { teamsAction } from '../redux/actions/teamsAction';
 
-
 /* 
     팀 리스트
     멤버들 리스트(선택되면 없어지게)
@@ -15,9 +14,7 @@ import { teamsAction } from '../redux/actions/teamsAction';
 
 const Entry = () => {    
 
-    const {teamsDataList, entryDataList, loading2} = useSelector((state) => state.teams);
-
-    const [entryList, setEntryList] = useState([]);
+    const {teamsDataList, entryList, loading2} = useSelector((state) => state.teams);
 
     const [teamList, setTeamList] = useState([]);
 
@@ -29,12 +26,7 @@ const Entry = () => {
     
     useEffect(() => {
         if(loading2 == false){
-
-            const copyArr2 = [...entryDataList];
-            const sortedTier = [...copyArr2].sort((a, b) => a.tier - b.tier);
-            setEntryList(sortedTier);
-
-            const copyArr3 = [...teamsDataList];
+            const copyArr3 = teamsDataList;
             setTeamList(copyArr3);
         }
     }, [loading2]);
@@ -42,22 +34,21 @@ const Entry = () => {
     const clickAddEntryMaker = () => {
         const randomNum = Math.floor(Math.random() * ((999999 - 100000) + 1));
 
-        const entryData = {
+        const initData = {
           id: randomNum,
-          name: "",
+          teamName: "",
+          personnel: 0,
           playerList: []
         }
     
-        teamList[teamList.length] = entryData;
+        teamList[teamList.length] = initData;
         setTeamList(teamList);
 
-        dispatch(teamsAction.postTeamsData(entryData));
+        // console.log("teamList??", teamList);
+
+        dispatch(teamsAction.postTeamsData(initData));
         dispatch(teamsAction.getTeamsData());
     }
-
-    useEffect(() => {
-        console.log("teamList!!!", teamList);
-    }, [teamList])
 
     if(loading2){
         return (
@@ -73,7 +64,7 @@ const Entry = () => {
                 <div className='entryWrap'>
                     {
                         teamList?.map((item, index) => (
-                            <EntryMaker key={index} teamListItem={item} entryIdx={index} entryList={entryList} teamList={teamList} setTeamList={setTeamList}/>
+                            <EntryMaker key={index} teamListItem={item} listLength={teamList.length} entryIdx={index}/>
                         ))
                     }
                 </div>

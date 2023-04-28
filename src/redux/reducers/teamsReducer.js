@@ -1,6 +1,6 @@
 let initState = {
     teamsDataList: {},
-    entryDataList: {},
+    entryList: {},
     loading2: true,
 }
 
@@ -22,10 +22,21 @@ const teamsReducer = (state = initState, action) => {
             return{
                 ...state,
                 teamsDataList: payload.data,
-                entryDataList: payload.data2,
+                entryList: payload.data2,
                 loading2: false
             }
-        
+        case "SET_ENTRY_LIST":{
+            return{
+                ...state,
+                entryList: payload.data
+            }
+        }
+        case "UPDATE_ENTRY_LIST":{
+            return{
+                ...state,
+                entryList: payload.data
+            }
+        }
         default:
             return{...state}
     }

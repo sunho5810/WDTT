@@ -8,8 +8,9 @@ function getMembersData(){
             const membersData = await api.get(`/members`);
             
             // console.log("membersData?", membersData);
+            const sortedNamemembersData = [...membersData.data].sort((a, b) => a.name.localeCompare(b.name));
             
-            dispatch({type: "GET_MEMBERS_DATA_SUCCESS", payload: {membersData: membersData.data}});
+            dispatch({type: "GET_MEMBERS_DATA_SUCCESS", payload: {membersData: sortedNamemembersData}});
         } catch (error) {
             // console.log("error");
             dispatch({type: "MEMBERS_DATA_FAILED"});
