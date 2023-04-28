@@ -248,7 +248,7 @@
     {
       "id": 6498,
       "index": 0,
-      "visible": false,
+      "visible": true,
       "backNum": 23,
       "name": "김민철",
       "tier": 1
@@ -296,7 +296,7 @@
     {
       "id": 5043,
       "index": 6,
-      "visible": false,
+      "visible": true,
       "backNum": 18,
       "name": "임하람",
       "tier": 1.5
@@ -312,7 +312,7 @@
     {
       "id": 8695,
       "index": 8,
-      "visible": false,
+      "visible": true,
       "backNum": 9,
       "name": "김도형",
       "tier": 2
@@ -344,7 +344,7 @@
     {
       "id": 4544,
       "index": 12,
-      "visible": false,
+      "visible": true,
       "backNum": 6,
       "name": "조성원",
       "tier": 2
@@ -462,69 +462,5 @@
       "tier": 3
     }
   ],
-  "teams": [
-    {
-      "id": 162258,
-      "teamName": "악마팀",
-      "personnel": 3,
-      "playerList": [
-        {
-          "id": 4544,
-          "index": 12,
-          "backNum": 6,
-          "name": "조성원",
-          "tier": 2
-        },
-        {
-          "id": 8695,
-          "index": 8,
-          "backNum": 9,
-          "name": "김도형",
-          "tier": 2
-        },
-        {
-          "id": 5043,
-          "index": 6,
-          "backNum": 18,
-          "name": "임하람",
-          "tier": 1.5
-        }
-      ]
-    },
-    {
-      "id": 826845,
-      "teamName": "천사팀",
-      "personnel": 4,
-      "playerList": [
-        {
-          "id": 6498,
-          "index": 0,
-          "backNum": 23,
-          "name": "김민철",
-          "tier": 1
-        },
-        {
-          "id": 2621,
-          "index": 1,
-          "backNum": 14,
-          "name": "박기수",
-          "tier": 1
-        },
-        {
-          "id": 3238,
-          "index": 2,
-          "backNum": 21,
-          "name": "장치윤",
-          "tier": 1
-        },
-        {
-          "id": 120,
-          "index": 3,
-          "backNum": 25,
-          "name": "주선호",
-          "tier": 1
-        }
-      ]
-    }
-  ]
+  "teams": []
 }
