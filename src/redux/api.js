@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://my-json-server.typicode.com/sunho5810/WDTT/db',
+  baseURL: 'https://my-json-server.typicode.com/sunho5810/WDTT',
   // baseURL: 'http://localhost:5000',
   headers: {'X-Custom-Header': 'foobar'}
 });
