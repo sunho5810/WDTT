@@ -1,26 +1,28 @@
 let initState = {
     teamsDataList: {},
-    loading2: true
+    entryDataList: {},
+    loading2: true,
 }
 
 const teamsReducer = (state = initState, action) => {
     let {type, payload} = action;
 
     switch (type) {
-        case "ENTRY_DATA_REQUEST":
+        case "TEAMS_DATA_REQUEST":
             return{
                 ...state,
-                loading2: true
+                loading2: true,
             }
-        case "ENTRY_DATA_FAILED":
+        case "TEAMS_DATA_FAILED":
             return{
                 ...state,
-                loading2: true
+                loading2: true,
             }
-        case "GET_ENTRY_DATA_SUCCESS":
+        case "GET_TEAMS_DATA_SUCCESS":
             return{
                 ...state,
                 teamsDataList: payload.data,
+                entryDataList: payload.data2,
                 loading2: false
             }
         

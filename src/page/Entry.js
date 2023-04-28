@@ -13,13 +13,9 @@ import { teamsAction } from '../redux/actions/teamsAction';
     팀 갯수는 셀렉트 박스? input=number? 둘중하나 선택
 */
 
-const Entry = () => {
+const Entry = () => {    
 
-    const {membersList, loading} = useSelector((state) => state.members);
-    console.log("membersList?????", membersList);
-
-    const {teamsDataList, loading2} = useSelector((state) => state.teams);
-    console.log("teamsDataList?????", teamsDataList);
+    const {teamsDataList, entryDataList, loading2} = useSelector((state) => state.teams);
 
     const [entryList, setEntryList] = useState([]);
 
@@ -28,23 +24,20 @@ const Entry = () => {
     const dispatch = useDispatch();
     
     useEffect(() => {
-        dispatch(membersAction.getMembersData());
         dispatch(teamsAction.getTeamsData());
     }, []);
     
-    useEffect(() => {      
-        if(loading == false){
-            const copyArr2 = [...membersList];
+    useEffect(() => {
+        if(loading2 == false){
+
+            const copyArr2 = [...entryDataList];
             const sortedTier = [...copyArr2].sort((a, b) => a.tier - b.tier);
             setEntryList(sortedTier);
-            console.log("entryList??", entryList);
-        }
-        if(loading2 == false){
+
             const copyArr3 = [...teamsDataList];
             setTeamList(copyArr3);
-            console.log("teamList??", teamList);
         }
-    }, [loading, loading2]);
+    }, [loading2]);
 
     const clickAddEntryMaker = () => {
         const randomNum = Math.floor(Math.random() * ((999999 - 100000) + 1));
@@ -62,7 +55,11 @@ const Entry = () => {
         dispatch(teamsAction.getTeamsData());
     }
 
-    if(loading && loading2){
+    useEffect(() => {
+        console.log("teamList!!!", teamList);
+    }, [teamList])
+
+    if(loading2){
         return (
             <ClipLoader
                 color="#0F1314"
@@ -74,10 +71,9 @@ const Entry = () => {
         return (
             <div className='inner'>
                 <div className='entryWrap'>
-                    {/* <EntryMaker entryList={entryList} setEntryList={setEntryList} setTeamList={setTeamList}/> */}
                     {
                         teamList?.map((item, index) => (
-                            <EntryMaker key={index} entryIdx={index} entryList={entryList} setEntryList={setEntryList} teamList={item} setTeamList={setTeamList}/>
+                            <EntryMaker key={index} teamListItem={item} entryIdx={index} entryList={entryList} teamList={teamList} setTeamList={setTeamList}/>
                         ))
                     }
                 </div>

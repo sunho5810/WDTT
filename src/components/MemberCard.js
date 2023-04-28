@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { membersAction } from '../redux/actions/membersAction';
 
-const MemberCard = ({item, setTempList, tempList, itemIdx}) => {
+const MemberCard = ({item, tempList, setTempList, itemIdx}) => {
 
   const auth = useSelector((state) => state.auth.authenticate);
   // const membersList = useSelector((state) => state.members.membersList);

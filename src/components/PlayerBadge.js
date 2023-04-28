@@ -1,30 +1,27 @@
 import React, { useEffect, useState } from 'react'
 
-const PlayerBadge = ({item, selectedList, setSelectedList, entryIdx}) => {
+const PlayerBadge = ({item, entryIdx, selectedList, setSelectedList, teamListItem, setTeamList, teamList}) => {
 
-    const clickBadge = (e) => {
-        // console.log("target?", e.target);
-
-        document.querySelector(`.entryMaker__playersList--${entryIdx}`).append(e.target);
-
-        selectedList[selectedList.length] = {
+    const clickBadge = () => {
+        const tempData = {
             id: item.id,
             backNum: item.backNum,
             name: item.name,
             tier: item.tier
         }
 
+        selectedList[selectedList.length] = tempData;
         setSelectedList(selectedList);
+        console.log("selectedList??", selectedList);
 
-        console.log("selectedList?", selectedList);
-    }
-
-    const delBadge = (e) => {
-        document.querySelector(`.entryMaker__membersList--${entryIdx}`).append(e.target);
+        teamListItem.playerList = selectedList;
+        setTeamList({...teamListItem, playerList: teamListItem.playerList});
+        console.log("teamList?", teamList);
+        console.log("teamListItem?", teamListItem);
     }
 
   return (
-    <li className='playerBadge' onClick={(e) => clickBadge(e)}>
+    <li className={`playerBadge playerBadge--${item.id}`} onClick={() => clickBadge()}>
         {item?.backNum} / {item?.name} / {item?.tier} {/* <span onClick={(e)=>delBadge(e)}>x</span> */}
     </li>
   )
