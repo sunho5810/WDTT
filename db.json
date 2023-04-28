@@ -256,7 +256,7 @@
     {
       "id": 2621,
       "index": 1,
-      "visible": false,
+      "visible": true,
       "backNum": 14,
       "name": "박기수",
       "tier": 1
@@ -264,7 +264,7 @@
     {
       "id": 3238,
       "index": 2,
-      "visible": false,
+      "visible": true,
       "backNum": 21,
       "name": "장치윤",
       "tier": 1
@@ -272,7 +272,7 @@
     {
       "id": 120,
       "index": 3,
-      "visible": false,
+      "visible": true,
       "backNum": 25,
       "name": "주선호",
       "tier": 1
