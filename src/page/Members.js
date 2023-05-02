@@ -68,13 +68,16 @@ const Members = () => {
         const checkBox = document.querySelectorAll("tbody td input[type='checkbox']");
         if(e.target.checked){
             for(var i = 0; i < checkBox.length; i++){
-                console.log("checkBox?", checkBox[i].checked);
+                // console.log("checkBox?", checkBox[i].checked);
                 checkBox[i].checked = true;
+                checkBox[i].dispatchEvent(new Event('change'));
+                // console.log(checkBox[i].dispatchEvent(new Event('change')));
             }
         } else {
             for(var i = 0; i < checkBox.length; i++){
-                console.log("checkBox?", checkBox[i].checked);
+                // console.log("checkBox?", checkBox[i].checked);
                 checkBox[i].checked = false;
+                checkBox[i].dispatchEvent(new Event('change'));
             }
         }
     }
