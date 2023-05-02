@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import EntryMaker from '../components/EntryMaker'
 import { useDispatch, useSelector } from 'react-redux';
-import { membersAction } from '../redux/actions/membersAction';
 import { ClipLoader } from 'react-spinners';
 import { Button } from 'react-bootstrap';
 import { teamsAction } from '../redux/actions/teamsAction';
@@ -14,7 +13,7 @@ import { teamsAction } from '../redux/actions/teamsAction';
 
 const Entry = () => {    
 
-    const {teamsDataList, entryList, loading2} = useSelector((state) => state.teams);
+    const {teamsDataList, loading2} = useSelector((state) => state.teams);
 
     const [teamList, setTeamList] = useState([]);
 
@@ -33,23 +32,21 @@ const Entry = () => {
 
     const clickAddEntryMaker = () => {
         const randomNum = Math.floor(Math.random() * ((999999 - 100000) + 1));
-
+        
         const initData = {
-          id: randomNum,
-          teamName: "",
-          personnel: 0,
-          playerList: []
+            id: randomNum,
+            teamName: "",
+            personnel: 0,
+            playerList: []
         }
-    
+        
         teamList[teamList.length] = initData;
         setTeamList(teamList);
-
-        // console.log("teamList??", teamList);
-
+        
         dispatch(teamsAction.postTeamsData(initData));
         dispatch(teamsAction.getTeamsData());
     }
-
+    
     if(loading2){
         return (
             <ClipLoader
@@ -68,7 +65,7 @@ const Entry = () => {
                         ))
                     }
                 </div>
-                <Button variant='success' onClick={() => clickAddEntryMaker()}>추가</Button>
+                <Button variant='dark' onClick={() => clickAddEntryMaker()}>추가</Button>
             </div>
           )
     }

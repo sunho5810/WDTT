@@ -46,6 +46,7 @@ const MemberCard = ({item, tempList, setTempList, itemIdx}) => {
           <td><input className='input' type='text' defaultValue={item.name} onChange={(e) => changeValue(e, "name", itemIdx)}/></td>
           <td>
             <select onChange={(e) => changeValue(e, "tier", itemIdx)} defaultValue={item.tier}>
+              <option value={0}>0</option>
               <option value={1}>1</option>
               <option value={1.5}>1.5</option>
               <option value={2}>2</option>

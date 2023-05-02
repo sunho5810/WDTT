@@ -7,17 +7,13 @@ import { teamsAction } from "../redux/actions/teamsAction";
 
 const EntryMaker = ({teamListItem, entryIdx}) => {
 
-  // console.log("teamListItem.playerList?", teamListItem.playerList);
-
   const {teamsDataList, entryList} = useSelector((state) => state.teams);
 
   const [selectedList, setSelectedList] = useState([...teamListItem.playerList]);
-  // console.log("EntryMaker -> selectedList?", selectedList);
 
   const [personnel, setPersonnel] = useState(teamListItem.personnel);
 
   const [teamName, setTeamName] = useState(teamListItem.teamName);
-  // console.log("EntryMaker -> teamName?", teamName);
 
   const dispatch = useDispatch();
 
@@ -30,7 +26,6 @@ const EntryMaker = ({teamListItem, entryIdx}) => {
     }
 
     dispatch(teamsAction.putTeamsData(teamListItem));
-    // console.log("saveEntry -> entryList??", entryList);
     dispatch(teamsAction.updateEntryList(entryList));
   }
 

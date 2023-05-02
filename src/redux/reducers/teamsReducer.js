@@ -1,6 +1,7 @@
 let initState = {
     teamsDataList: {},
     entryList: {},
+    mercenaryList: [],
     loading2: true,
 }
 

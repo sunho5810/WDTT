@@ -15,7 +15,6 @@ const PlayerBadge = ({item, index, selectedList, setSelectedList, personnel, set
         const tempData = {
             id: item.id,
             index: index,
-            // visible: true,
             backNum: item.backNum,
             name: item.name,
             tier: item.tier
@@ -23,11 +22,9 @@ const PlayerBadge = ({item, index, selectedList, setSelectedList, personnel, set
         
         selectedList[selectedList.length] = tempData;
         setSelectedList(selectedList);
-        // console.log(`selectedList??`, selectedList);
 
         entryList[index].visible = false;
         dispatch({type: "UPDATE_ENTRY_LIST", payload: {data: entryList}});
-        // console.log("clickBadge -> entryList?", entryList);
     }
 
   return (
