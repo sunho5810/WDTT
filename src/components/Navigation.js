@@ -39,11 +39,11 @@ const Navigation = () => {
                             <Link to={"/members"} className="menuList__li__link" onClick={() => setOpen("")}>Members</Link>
                         </li>
                         {
-                            auth ? (
+                            auth && (
                                 <li className="menuList__li">
                                     <Link to={"/entry"} className="menuList__li__link" onClick={() => setOpen("")}>Entry</Link>
                                 </li>
-                            ) : ("")
+                            )
                         }
                         
                     </ul>

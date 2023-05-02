@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { membersAction } from '../redux/actions/membersAction';
 import { ClipLoader } from 'react-spinners';
 import { Button } from 'react-bootstrap';
+import { teamsAction } from '../redux/actions/teamsAction';
 
 const Members = () => {
 
@@ -11,6 +12,8 @@ const Members = () => {
     const auth = useSelector((state) => state.auth.authenticate);
 
     const [tempList, setTempList] = useState([]);
+
+    const [entryTempList, setEntryTempList] = useState([]);
 
     const dispatch = useDispatch();
     
@@ -31,25 +34,26 @@ const Members = () => {
     }, [auth])
 
     const clickUpdateMembersData = () => {
+        console.log("tempList??", tempList);
         dispatch(membersAction.updateMembersData(tempList));
     }
 
     const clickAddMembersData = () => {
         const randomNum = Math.floor(Math.random() * ((9999 - 1000) + 1));
-        // console.log("randomNum?", randomNum);
 
         const emptyObject = {
             id: randomNum,
             backNum: 0,
+            checkedEntry: false,
             name: "",
             tier: 0,
             games: 0,
+            late: 0,
             goals: 0,
-            assists: 0
+            assists: 0,
         }
         tempList[tempList.length] = emptyObject;
         setTempList(tempList);
-        // console.log("??", tempList);
 
         dispatch(membersAction.addMembersData(randomNum, emptyObject));
         dispatch(membersAction.getMembersData());
@@ -59,6 +63,28 @@ const Members = () => {
         const sortedData = [...tempList].sort((a, b) => dataName == "name" ? a[dataName].localeCompare(b[dataName]) : a[dataName] - b[dataName]);
         setTempList(sortedData);
     }
+
+    const allCheck = (e) => {
+        const checkBox = document.querySelectorAll("tbody td input[type='checkbox']");
+        if(e.target.checked){
+            for(var i = 0; i < checkBox.length; i++){
+                console.log("checkBox?", checkBox[i].checked);
+                checkBox[i].checked = true;
+            }
+        } else {
+            for(var i = 0; i < checkBox.length; i++){
+                console.log("checkBox?", checkBox[i].checked);
+                checkBox[i].checked = false;
+            }
+        }
+    }
+
+    const clickCreateEntryList = () => {
+        console.log("clickCreateEntryList!!");
+
+        dispatch(teamsAction.initEntryList(entryTempList));
+    }
+
 
     if(loading){
         return (
@@ -73,23 +99,25 @@ const Members = () => {
             <div className='inner'>
                 <table className='tbl'>
                     <colgroup>
-                        {/* <col width="3%"/> */}
-                        <col width="10%"/>
+                        {auth && <col width="3%"/>}
+                        <col width="5%"/>
                         <col width="10%"/>
                         <col width="15%"/>
-                        <col width="15%"/>
+                        <col width="10%"/>
+                        <col width="10%"/>
                         <col width="10%"/>
                         <col width="10%"/>
                         <col width="10%"/>
                     </colgroup>
                     <thead>
                         <tr>
-                            {/* <th></th> */}
+                            {auth && <th><input type='checkbox' onChange={(e) => allCheck(e)}/></th>}
                             <th>No.</th>
                             <th onClick={() => sortData("backNum")}>등번호</th>
                             <th onClick={() => sortData("name")}>이름</th>
                             <th onClick={() => sortData("tier")}>티어</th>
                             <th onClick={() => sortData("games")}>게임 수</th>
+                            <th onClick={() => sortData("late")}>지각</th>
                             <th onClick={() => sortData("goals")}>골</th>
                             <th onClick={() => sortData("assists")}>어시스트</th>
                         </tr>
@@ -97,18 +125,19 @@ const Members = () => {
                     <tbody>
                         {
                             tempList?.map((item, index) => (
-                                <MemberCard key={item.id} itemIdx={index} item={item} tempList={tempList} setTempList={setTempList}/>
+                                <MemberCard key={item.id} itemIdx={index} item={item} tempList={tempList} setTempList={setTempList} entryTempList={entryTempList} setEntryTempList={setEntryTempList}/>
                             ))
                         }
                     </tbody>
                 </table>
                 {
-                    auth === true ? (
+                    auth && (
                         <div>
                             <Button variant='dark' onClick={() => {clickUpdateMembersData()}}>수정</Button>
                             <Button variant='success' onClick={() => {clickAddMembersData()}}>추가</Button>
+                            <Button variant='primary' onClick={() => {clickCreateEntryList()}}>엔트리 생성</Button>
                         </div>
-                    ) : ("")
+                    )
                 }
                 
             </div>

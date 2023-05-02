@@ -3,464 +3,301 @@
     {
       "id": 120,
       "backNum": 25,
+      "checkedEntry": false,
       "name": "주선호",
       "tier": 1,
       "games": 2,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 964,
       "backNum": 7,
+      "checkedEntry": false,
       "name": "우병길",
       "tier": 2.5,
       "games": 2,
+      "late": 0,
       "goals": 0,
       "assists": 1
     },
     {
       "id": 2500,
       "backNum": 25,
+      "checkedEntry": false,
       "name": "박종훈",
       "tier": 2,
       "games": 3,
+      "late": 0,
       "goals": 2,
       "assists": 1
     },
     {
       "id": 8695,
       "backNum": 9,
+      "checkedEntry": false,
       "name": "김도형",
       "tier": 2,
       "games": 1,
+      "late": 0,
       "goals": 4,
       "assists": 3
     },
     {
       "id": 6498,
       "backNum": 23,
+      "checkedEntry": false,
       "name": "김민철",
       "tier": 1,
       "games": 2,
+      "late": 0,
       "goals": 2,
       "assists": 4
     },
     {
       "id": 5204,
       "backNum": 12,
+      "checkedEntry": false,
       "name": "김재경",
       "tier": 1.5,
       "games": 0,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 1945,
       "backNum": 0,
+      "checkedEntry": false,
       "name": "김주성",
       "tier": 2.5,
       "games": 1,
+      "late": 0,
       "goals": 0,
       "assists": 1
     },
     {
       "id": 2621,
       "backNum": 14,
+      "checkedEntry": false,
       "name": "박기수",
       "tier": 1,
       "games": 0,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 6453,
       "backNum": 3,
+      "checkedEntry": false,
       "name": "박진한",
       "tier": 1.5,
       "games": 2,
+      "late": 0,
       "goals": 1,
       "assists": 0
     },
     {
       "id": 7415,
       "backNum": 16,
+      "checkedEntry": false,
       "name": "서보형",
       "tier": 3,
       "games": 1,
+      "late": 0,
       "goals": 1,
       "assists": 0
     },
     {
       "id": 156,
       "backNum": 17,
+      "checkedEntry": false,
       "name": "서준식",
       "tier": 2.5,
       "games": 1,
+      "late": 0,
       "goals": 1,
       "assists": 1
     },
     {
       "id": 3167,
       "backNum": 10,
+      "checkedEntry": false,
       "name": "오지환",
       "tier": 3,
       "games": 1,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 4279,
       "backNum": 99,
+      "checkedEntry": false,
       "name": "우병걸",
       "tier": 2.5,
       "games": 1,
+      "late": 0,
       "goals": 5,
       "assists": 1
     },
     {
       "id": 6032,
       "backNum": 5,
+      "checkedEntry": false,
       "name": "우병조",
       "tier": 3,
       "games": 0,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 3071,
       "backNum": 11,
+      "checkedEntry": false,
       "name": "이서범",
       "tier": 2,
       "games": 1,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 7380,
       "backNum": 19,
+      "checkedEntry": false,
       "name": "이영재",
       "tier": 2.5,
       "games": 0,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 3655,
       "backNum": 74,
+      "checkedEntry": false,
       "name": "이종원",
       "tier": 2.5,
       "games": 1,
+      "late": 0,
       "goals": 1,
       "assists": 2
     },
     {
       "id": 5043,
       "backNum": 18,
+      "checkedEntry": false,
       "name": "임하람",
       "tier": 1.5,
       "games": 0,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 3238,
       "backNum": 21,
+      "checkedEntry": false,
       "name": "장치윤",
       "tier": 1,
       "games": 0,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 4348,
       "backNum": 1,
+      "checkedEntry": false,
       "name": "정민호",
       "tier": 2.5,
       "games": 2,
+      "late": 0,
       "goals": 2,
       "assists": 0
     },
     {
       "id": 4034,
       "backNum": 77,
+      "checkedEntry": false,
       "name": "정재봉",
       "tier": 2,
       "games": 1,
+      "late": 0,
       "goals": 2,
       "assists": 0
     },
     {
       "id": 4790,
       "backNum": 33,
+      "checkedEntry": false,
       "name": "정지호",
       "tier": 2.5,
       "games": 2,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 8267,
       "backNum": 4,
+      "checkedEntry": false,
       "name": "정회돈",
       "tier": 3,
       "games": 1,
+      "late": 0,
       "goals": 0,
       "assists": 0
     },
     {
       "id": 4544,
       "backNum": 6,
+      "checkedEntry": false,
       "name": "조성원",
       "tier": 2,
       "games": 2,
+      "late": 0,
       "goals": 8,
       "assists": 1
     },
     {
       "id": 3201,
       "backNum": 22,
+      "checkedEntry": false,
       "name": "조철환",
       "tier": 2.5,
       "games": 2,
+      "late": 0,
       "goals": 2,
       "assists": 0
     },
     {
       "id": 1182,
       "backNum": 8,
+      "checkedEntry": false,
       "name": "주재우",
       "tier": 1.5,
       "games": 2,
+      "late": 0,
       "goals": 4,
       "assists": 5
     },
     {
       "id": 2449,
       "backNum": 69,
+      "checkedEntry": false,
       "name": "최영",
       "tier": 3,
       "games": 0,
+      "late": 0,
       "goals": 0,
       "assists": 0
     }
   ],
-  "entryList": [
-    {
-      "id": 6498,
-      "index": 0,
-      "visible": true,
-      "backNum": 23,
-      "name": "김민철",
-      "tier": 1
-    },
-    {
-      "id": 2621,
-      "index": 1,
-      "visible": true,
-      "backNum": 14,
-      "name": "박기수",
-      "tier": 1
-    },
-    {
-      "id": 3238,
-      "index": 2,
-      "visible": true,
-      "backNum": 21,
-      "name": "장치윤",
-      "tier": 1
-    },
-    {
-      "id": 120,
-      "index": 3,
-      "visible": true,
-      "backNum": 25,
-      "name": "주선호",
-      "tier": 1
-    },
-    {
-      "id": 5204,
-      "index": 4,
-      "visible": true,
-      "backNum": 12,
-      "name": "김재경",
-      "tier": 1.5
-    },
-    {
-      "id": 6453,
-      "index": 5,
-      "visible": true,
-      "backNum": 3,
-      "name": "박진한",
-      "tier": 1.5
-    },
-    {
-      "id": 5043,
-      "index": 6,
-      "visible": true,
-      "backNum": 18,
-      "name": "임하람",
-      "tier": 1.5
-    },
-    {
-      "id": 1182,
-      "index": 7,
-      "visible": true,
-      "backNum": 8,
-      "name": "주재우",
-      "tier": 1.5
-    },
-    {
-      "id": 8695,
-      "index": 8,
-      "visible": true,
-      "backNum": 9,
-      "name": "김도형",
-      "tier": 2
-    },
-    {
-      "id": 2500,
-      "index": 9,
-      "visible": true,
-      "backNum": 25,
-      "name": "박종훈",
-      "tier": 2
-    },
-    {
-      "id": 3071,
-      "index": 10,
-      "visible": true,
-      "backNum": 11,
-      "name": "이서범",
-      "tier": 2
-    },
-    {
-      "id": 4034,
-      "index": 11,
-      "visible": true,
-      "backNum": 77,
-      "name": "정재봉",
-      "tier": 2
-    },
-    {
-      "id": 4544,
-      "index": 12,
-      "visible": true,
-      "backNum": 6,
-      "name": "조성원",
-      "tier": 2
-    },
-    {
-      "id": 1945,
-      "index": 13,
-      "visible": true,
-      "backNum": 0,
-      "name": "김주성",
-      "tier": 2.5
-    },
-    {
-      "id": 156,
-      "index": 14,
-      "visible": true,
-      "backNum": 17,
-      "name": "서준식",
-      "tier": 2.5
-    },
-    {
-      "id": 4279,
-      "index": 15,
-      "visible": true,
-      "backNum": 99,
-      "name": "우병걸",
-      "tier": 2.5
-    },
-    {
-      "id": 964,
-      "index": 16,
-      "visible": true,
-      "backNum": 7,
-      "name": "우병길",
-      "tier": 2.5
-    },
-    {
-      "id": 7380,
-      "index": 17,
-      "visible": true,
-      "backNum": 19,
-      "name": "이영재",
-      "tier": 2.5
-    },
-    {
-      "id": 3655,
-      "index": 18,
-      "visible": true,
-      "backNum": 74,
-      "name": "이종원",
-      "tier": 2.5
-    },
-    {
-      "id": 4348,
-      "index": 19,
-      "visible": true,
-      "backNum": 1,
-      "name": "정민호",
-      "tier": 2.5
-    },
-    {
-      "id": 4790,
-      "index": 20,
-      "visible": true,
-      "backNum": 33,
-      "name": "정지호",
-      "tier": 2.5
-    },
-    {
-      "id": 3201,
-      "index": 21,
-      "visible": true,
-      "backNum": 22,
-      "name": "조철환",
-      "tier": 2.5
-    },
-    {
-      "id": 7415,
-      "index": 22,
-      "visible": true,
-      "backNum": 16,
-      "name": "서보형",
-      "tier": 3
-    },
-    {
-      "id": 3167,
-      "index": 23,
-      "visible": true,
-      "backNum": 10,
-      "name": "오지환",
-      "tier": 3
-    },
-    {
-      "id": 6032,
-      "index": 24,
-      "visible": true,
-      "backNum": 5,
-      "name": "우병조",
-      "tier": 3
-    },
-    {
-      "id": 8267,
-      "index": 25,
-      "visible": true,
-      "backNum": 4,
-      "name": "정회돈",
-      "tier": 3
-    },
-    {
-      "id": 2449,
-      "index": 26,
-      "visible": true,
-      "backNum": 69,
-      "name": "최영",
-      "tier": 3
-    }
-  ],
+  "entryList": [],
   "teams": []
 }

@@ -60,4 +60,26 @@ function updateEntryList(entryList){
     }
 }
 
-export const teamsAction = {getTeamsData, postTeamsData, putTeamsData, delTeamsData, updateEntryList};
+function initEntryList(list){
+    return async(dispatch) => {
+        console.log("list?", list);
+        const getData = await api.get(`/entryList`);
+
+        console.log("getData.data?", getData.data);
+
+        const data = [];
+
+        if(getData.data[0] != null){
+            console.log("put!!");
+            // for(var i = 0; i < list.length; i++){
+                data = await api.put(`/entryList`, list);
+            // }
+        } else {
+            console.log("post!!");
+            data = await api.post(`/entryList`, list);
+        }
+        console.log("data??", data);
+    }
+}
+
+export const teamsAction = {getTeamsData, postTeamsData, putTeamsData, delTeamsData, updateEntryList, initEntryList};
