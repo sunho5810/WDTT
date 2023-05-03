@@ -9,23 +9,7 @@ function getTeamsData(){
 
             const teams = await api.get(`/teams`);
 
-            const objectList = [];
-            
-            entryList.data.map((item, index) => {
-                objectList[index] = {
-                    id: item.id,
-                    index: index,
-                    visible: item.visible,
-                    backNum: item.backNum,
-                    name: item.name,
-                    tier: item.tier
-                }
-            });
-
-            const sortedNameEntryData = [...objectList].sort((a, b) => a.name.localeCompare(b.name));
-            const sortedTierEntryData = [...sortedNameEntryData].sort((a, b) => a.tier - b.tier);
-
-            dispatch({type: "GET_TEAMS_DATA_SUCCESS", payload: {data: teams.data, data2: sortedTierEntryData}});
+            dispatch({type: "GET_TEAMS_DATA_SUCCESS", payload: {data: teams.data, data2: entryList}});
         } catch (error) {
             dispatch({type: "TEAMS_DATA_FAILED"});
         }
@@ -63,22 +47,33 @@ function updateEntryList(entryList){
 function initEntryList(list){
     return async(dispatch) => {
         console.log("list?", list);
-        const getData = await api.get(`/entryList`);
+        const getEntryListData = await api.get(`/entryList`);
+        console.log("getEntryListData?", getEntryListData);
+        
+        const objectList = [];
+        list.map((item, index) => {
+            objectList[index] = {
+                id: item.id,
+                index: index,
+                selected: false,
+                backNum: item.backNum,
+                name: item.name,
+                tier: item.tier
+            }
+        });
 
-        console.log("getData.data?", getData.data);
+        const sortedNameEntryData = [...objectList].sort((a, b) => a.name.localeCompare(b.name));
+        const sortedTierEntryData = [...sortedNameEntryData].sort((a, b) => a.tier - b.tier);
+        console.log("sortedTierEntryData??", sortedTierEntryData);
 
-        const data = [];
-
-        if(getData.data[0] != null){
-            console.log("put!!");
-            // for(var i = 0; i < list.length; i++){
-                data = await api.put(`/entryList`, list);
-            // }
+        if(getEntryListData.data[0] != null){
+            const data = await api.put(`/entryList`, sortedTierEntryData);
+            console.log("put!!", data);
         } else {
-            console.log("post!!");
-            data = await api.post(`/entryList`, list);
+            const data = await api.post(`/entryList`, sortedTierEntryData);
+            console.log("post!!", data);
         }
-        console.log("data??", data);
+
     }
 }
 

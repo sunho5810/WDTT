@@ -23,7 +23,7 @@ const PlayerBadge = ({item, index, selectedList, setSelectedList, personnel, set
         selectedList[selectedList.length] = tempData;
         setSelectedList(selectedList);
 
-        entryList[index].visible = false;
+        entryList[index].selected = true;
         dispatch({type: "UPDATE_ENTRY_LIST", payload: {data: entryList}});
     }
 

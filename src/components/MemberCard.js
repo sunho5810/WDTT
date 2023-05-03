@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { membersAction } from '../redux/actions/membersAction';
+import { Button } from 'react-bootstrap';
 
 const MemberCard = ({item, tempList, setTempList, itemIdx, entryTempList, setEntryTempList}) => {
 
@@ -34,22 +35,28 @@ const MemberCard = ({item, tempList, setTempList, itemIdx, entryTempList, setEnt
     console.log("onChange!!");
     setUpdateData({...updateData, checkedEntry: e.target.checked});
     setDataIndex(idx);
-    if(e.target.checked){
-      entryTempList[entryTempList.length] = item;
-      setEntryTempList(entryTempList);
-    } else {
-      for(var i = 0; i < entryTempList.length; i++){
-        if(entryTempList[i].id == id){
-          entryTempList.splice(i, 1);
-        }
-      }
-    }
+    // if(e.target.checked){
+    //   entryTempList[entryTempList.length] = item;
+    //   setEntryTempList(entryTempList);
+    // } else {
+    //   for(var i = 0; i < entryTempList.length; i++){
+    //     if(entryTempList[i].id == id){
+    //       entryTempList.splice(i, 1);
+    //     }
+    //     document.querySelector("#allCheck").checked = false;
+    //   }
+    // }
+    if(!e.target.checked){document.querySelector("#allCheck").checked = false;}
+  }
+
+  const delMember = () => {
+    
   }
 
   if(auth){
     return (
       <tr>
-          <td><input type='checkbox' defaultChecked={item.checkedEntry} onChange={(e) => checkChecked(e, item.id, itemIdx)}/></td>
+          <td><input type='checkbox' className='chk-checkEntry' defaultChecked={item.checkedEntry} onChange={(e) => {checkChecked(e, item.id, itemIdx);}}/></td>
           <td>{itemIdx + 1}</td>
           <td><input className='input' type='text' defaultValue={item.backNum} onChange={(e) => changeValue(e, "backNum", itemIdx)}/></td>
           <td><input className='input' type='text' defaultValue={item.name} onChange={(e) => changeValue(e, "name", itemIdx)}/></td>
@@ -67,6 +74,7 @@ const MemberCard = ({item, tempList, setTempList, itemIdx, entryTempList, setEnt
           <td><input className='input' type='text' defaultValue={item.late} onChange={(e) => changeValue(e, "late", itemIdx)}/></td>
           <td><input className='input' type='text' defaultValue={item.goals} onChange={(e) => changeValue(e, "goals", itemIdx)}/></td>
           <td><input className='input' type='text' defaultValue={item.assists} onChange={(e) => changeValue(e, "assists", itemIdx)}/></td>
+          <td><Button variant='danger' onClick={() => delMember()}>삭제</Button></td>
       </tr>
     )
   } else {

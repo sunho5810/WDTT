@@ -67,7 +67,7 @@ const EntryMaker = ({teamListItem, entryIdx}) => {
         <div className="entryMaker__members">
           <ul className={`entryMaker__membersList entryMaker__membersList--${entryIdx}`} >
             {
-              entryList?.map((item, index) => item.visible == true ? (
+              entryList?.map((item, index) => item.selected == false ? (
                 <PlayerBadge
                   key={index}
                   index={index}
