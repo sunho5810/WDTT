@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/WDTT/static/css/main.58cab670.css",
+    "main.js": "/WDTT/static/js/main.db55c299.js",
+    "static/js/787.6a3172f4.chunk.js": "/WDTT/static/js/787.6a3172f4.chunk.js",
+    "static/media/NotoSansKR-Medium.otf": "/WDTT/static/media/NotoSansKR-Medium.56207b5e52841342a21b.otf",
+    "static/media/NotoSansKR-Bold-Hestia.eot": "/WDTT/static/media/NotoSansKR-Bold-Hestia.739989d4b27536d9b302.eot",
+    "static/media/NotoSansKR-Bold-Hestia.otf": "/WDTT/static/media/NotoSansKR-Bold-Hestia.4089673cb6fb849d776d.otf",
+    "static/media/NotoSansKR-Regular-Hestia.eot": "/WDTT/static/media/NotoSansKR-Regular-Hestia.eb915090b7627802ed38.eot",
+    "static/media/NotoSansKR-Regular-Hestia.otf": "/WDTT/static/media/NotoSansKR-Regular-Hestia.ebab7adffa8d17f55ca6.otf",
+    "static/media/NotoSansKR-Bold-Hestia.woff": "/WDTT/static/media/NotoSansKR-Bold-Hestia.5204bbd1efd6bc510b9a.woff",
+    "static/media/NotoSansKR-Regular-Hestia.woff": "/WDTT/static/media/NotoSansKR-Regular-Hestia.0091f12f78433f45526f.woff",
+    "static/media/wdttLogo.png": "/WDTT/static/media/wdttLogo.dbaed7980eea4c41a734.png",
+    "index.html": "/WDTT/index.html",
+    "main.58cab670.css.map": "/WDTT/static/css/main.58cab670.css.map",
+    "main.db55c299.js.map": "/WDTT/static/js/main.db55c299.js.map",
+    "787.6a3172f4.chunk.js.map": "/WDTT/static/js/787.6a3172f4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58cab670.css",
+    "static/js/main.db55c299.js"
+  ]
+}
